@@ -13,6 +13,9 @@ public class CarContoller : MonoBehaviour
     private float currentbreakForce;
     private float modifier = 0;
 
+
+    [SerializeField] private int controlMode;
+
     [SerializeField] private float enginePower;
     [SerializeField] private float breakPower;
     [SerializeField] private float maxSteerAngle;
@@ -40,15 +43,26 @@ public class CarContoller : MonoBehaviour
 
     private void GetInput()
     {
-        horizontalInput = Input.GetAxis(HORIZONTAL);
-        verticalInput = Input.GetAxis(VERTICAL);
-        isBreaking = Input.GetKey(KeyCode.Space);
-
-        if (isBreaking)
+        verticalInput = 1;
+        if (controlMode == 0)
         {
-            ApplyBreaking();
+            horizontalInput = Input.GetAxis(HORIZONTAL);
+            isBreaking = Input.GetKey(KeyCode.Space);
+
+            if (isBreaking)
+            {
+                ApplyBreaking();
+            }
         }
 
+    }// Here starts the Android Turning System
+    public void TurningRight()
+    {
+        horizontalInput = -1f;
+    }
+    public void TurningLeft()
+    {
+        horizontalInput = 1f;
     }
     private void ApplyBreaking()
     {
@@ -63,7 +77,7 @@ public class CarContoller : MonoBehaviour
         if (modifier < 1 && IsAccelerating())
         {
             modifier += (0.001f * accelerationSpeed);
-            Debug.Log(modifier);
+            //Debug.Log(modifier);
            
         }
         if (!IsAccelerating())
@@ -80,7 +94,8 @@ public class CarContoller : MonoBehaviour
         }
         else
         {
-            return false;
+            // return false;
+            return true;
         }
     }
 
