@@ -13,8 +13,11 @@ public class CarContoller : MonoBehaviour
     private float currentbreakForce;
     private float modifier = 0;
 
+    private bool turningRight = false;
+    private bool turningLeft = false;
 
-    [SerializeField] private int controlMode;
+
+    [SerializeField] private int enableKeyboard;
 
     [SerializeField] private float enginePower;
     [SerializeField] private float breakPower;
@@ -44,7 +47,7 @@ public class CarContoller : MonoBehaviour
     private void GetInput()
     {
         verticalInput = 1;
-        if (controlMode == 0)
+        if (enableKeyboard == 1)
         {
             horizontalInput = Input.GetAxis(HORIZONTAL);
             isBreaking = Input.GetKey(KeyCode.Space);
@@ -56,13 +59,23 @@ public class CarContoller : MonoBehaviour
         }
 
     }// Here starts the Android Turning System
-    public void TurningRight()
+    public void pressedRight()
     {
-        horizontalInput = -1f;
+        turningRight = true;
+        Debug.Log("right pressed");
     }
-    public void TurningLeft()
+    public void pressedLeft()
     {
-        horizontalInput = 1f;
+        turningLeft = true;
+        Debug.Log("left pressed");
+    }
+    public void releasedRight()
+    {
+        turningRight = false;
+    }
+    public void releasedLeft()
+    {
+        turningLeft = false; 
     }
     private void ApplyBreaking()
     {
@@ -109,6 +122,18 @@ public class CarContoller : MonoBehaviour
     }
     private void HandleSteering()
     {
+        if (turningRight)
+        {
+            horizontalInput = 1;
+        }
+        else if(turningLeft)
+        {
+            horizontalInput = -1;
+        }
+        else
+        {
+            horizontalInput = 0;
+        }
         currentSteerAngle = maxSteerAngle * horizontalInput;
         frontLeftWheelCollider.steerAngle = currentSteerAngle;
         frontRightWheelCollider.steerAngle = currentSteerAngle;
