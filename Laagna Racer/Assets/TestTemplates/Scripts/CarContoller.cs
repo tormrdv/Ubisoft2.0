@@ -120,6 +120,11 @@ public class CarContoller : MonoBehaviour
         currentbreakForce = isBreaking ? breakPower : 100f;
 
     }
+    public void SetCarToStart()
+    {
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.Euler(0, -270, 0)*Quaternion.identity;
+    }
     private void HandleSteering()
     {
         if (turningRight)

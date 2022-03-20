@@ -26,6 +26,10 @@ public class CameraFollow : MonoBehaviour
         transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));
 
     }
+    public void SetCameraToStart()
+    {
+        transform.position = new Vector3(0, 0, 0);
+    }
     public float VelocityToCamera()
     {
         float endValue;
