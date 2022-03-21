@@ -28,11 +28,9 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             SceneManager.LoadScene("UserSettings");
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        else
+        {
+            transform.position = Vector3.Lerp(data.pressPosition, panelLocation, 1);
+        }
     }
 }

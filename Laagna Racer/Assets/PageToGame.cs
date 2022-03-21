@@ -28,6 +28,10 @@ public class PageToGame : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             SceneManager.LoadScene("GameScene");
         }
+        else
+        {
+            transform.position = Vector3.Lerp(data.pressPosition, panelLocation, 1);
+        }
     }
 
     // Update is called once per frame
