@@ -20,7 +20,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Vector3 CarPosition = Following.transform.position;
-        CarPosition.y += VelocityToCamera();
+        CarPosition.y += VelocityToCamera(); //Lisab kaamera Y teljele kõrgust mida kiirem see on.
         transform.position = Vector3.Lerp(transform.position,CarPosition, positionSmoothness);
         transform.rotation = Quaternion.Slerp(transform.rotation, Following.rotation, rotationSmoothness);
         transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0));

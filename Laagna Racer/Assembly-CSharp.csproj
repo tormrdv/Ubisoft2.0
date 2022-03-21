@@ -53,11 +53,14 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Restart.cs" />
+    <Compile Include="Assets\TestTemplates\Scripts\TextBlink.cs" />
+    <Compile Include="Assets\TestTemplates\Scripts\Restart.cs" />
     <Compile Include="Assets\TestTemplates\Scripts\CarContoller.cs" />
-    <Compile Include="Assets\StartControls.cs" />
+    <Compile Include="Assets\TestTemplates\Scripts\GameManager.cs" />
     <Compile Include="Assets\TestTemplates\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\TextBlink.cs" />
+    <Compile Include="Assets\TestTemplates\Scripts\PageSwiper.cs" />
+    <Compile Include="Assets\TestTemplates\Scripts\DummyRotation.cs" />
+    <Compile Include="Assets\PageToGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

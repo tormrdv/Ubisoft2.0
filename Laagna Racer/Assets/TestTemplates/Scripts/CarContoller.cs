@@ -124,6 +124,7 @@ public class CarContoller : MonoBehaviour
     {
         transform.position = Vector3.zero;
         transform.rotation = Quaternion.Euler(0, -270, 0)*Quaternion.identity;
+        this.gameObject.SetActive(false);
     }
     private void HandleSteering()
     {

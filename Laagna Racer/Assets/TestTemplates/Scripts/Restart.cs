@@ -16,5 +16,5 @@ public class Restart : MonoBehaviour
         CarControls.SetActive(false);
         this.gameObject.SetActive(false);
         
-    }
+    } //Restardi vajutusel viib elemendid sinna kus nad olid ning lülitab kontrollid välja.
 }

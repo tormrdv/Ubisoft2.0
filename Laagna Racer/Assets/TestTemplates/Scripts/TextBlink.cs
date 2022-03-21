@@ -15,6 +15,8 @@ public class TextBlink : MonoBehaviour
         StartCoroutine(FadeTextToZeroAlpha(fadeDelay, GetComponent<Text>()));
     }
 
+    //Kuna Objekti välja lülitamisel ei hakka Coroutine uuesti tööle, peab seda eraldi käivitama OnEnable funktsiooniga.
+
     private void Update()
     {
         while (!inProgress)
@@ -29,6 +31,8 @@ public class TextBlink : MonoBehaviour
             }
         }
     }
+
+    //inProgress on lisatud et ta Iga Frame ei alustaks uuesti. Ilma Selleta Tekst kuidagi vilkuv
 
 
 
@@ -57,4 +61,4 @@ public class TextBlink : MonoBehaviour
         faded = false;
         inProgress = false;
     }
-}
+} //See Basic Fade In-Out Kood. Lihtsalt muudab Alpha taset üle aja
