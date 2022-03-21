@@ -35,12 +35,24 @@ public class CarContoller : MonoBehaviour
     [SerializeField] private Transform backRightWheelTransform;
     private float currentSteerAngle;
 
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("VehicleColor"))
+        {
+            PlayerPrefs.SetString("VehicleColor", "FFFFFF");
+        }
+    }
+
     private void Update()
     {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+    }
+    public void VehicleSetColor()
+    {
+
     }
     
 
