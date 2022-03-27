@@ -24,14 +24,19 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     }
     public void OnEndDrag(PointerEventData data)
     {
-        if(data.pressPosition.x - data.position.x > 550)
-            //Kui liigutakse yle 550 yhiku, vahetub lehekylg
+        float difference = (data.pressPosition.x - data.position.x);
+        switch (difference)
         {
-            SceneManager.LoadScene("UserSettings");
+            case var expression when difference > 550f:
+                SceneManager.LoadScene("UserSettings");
+                break;
+            case var expression when difference < -550f:
+                Debug.Log("Scene Left Loaded");
+                break;
+            default:
+                transform.position = Vector3.Lerp(data.pressPosition, panelLocation, 1);
+                break;
         }
-        else
-        {
-            transform.position = Vector3.Lerp(data.pressPosition, panelLocation, 1);
-        }
+
     }
 }
