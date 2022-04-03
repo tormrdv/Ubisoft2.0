@@ -19,7 +19,6 @@ public class GameManager: MonoBehaviour
     public void StartGame()
     {
         PlayerVehicle.SetActive(true);
-        VehicleControls.SetActive(true);
         ResetButton.SetActive(true);
         StartScreen.SetActive(false);
 

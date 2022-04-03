@@ -566,15 +566,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Vuforia.Unity.Editor">
-      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Editor\Vuforia.Unity.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Vuforia.Unity.Wrapper">
-      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Wrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="Vuforia.Unity.Engine">
-      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Engine.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
     </Reference>

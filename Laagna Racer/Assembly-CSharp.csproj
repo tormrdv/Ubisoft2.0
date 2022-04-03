@@ -311,12 +311,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Vuforia.Unity.Wrapper">
-      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Wrapper.dll</HintPath>
-    </Reference>
-    <Reference Include="Vuforia.Unity.Engine">
-      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Engine.dll</HintPath>
-    </Reference>
     <Reference Include="netstandard">
       <HintPath>Q:\Unity\2020.3.22f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>
     </Reference>
@@ -747,14 +741,6 @@
     <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
       <Project>{C4CC0135-32AB-EF26-3E1D-568862A8C84F}</Project>
       <Name>UnityEditor.SpatialTracking</Name>
-    </ProjectReference>
-    <ProjectReference Include="VuforiaEditorScripts.csproj">
-      <Project>{A8982107-633C-816E-6305-0E9E13B9FA5A}</Project>
-      <Name>VuforiaEditorScripts</Name>
-    </ProjectReference>
-    <ProjectReference Include="VuforiaScripts.csproj">
-      <Project>{D5FC7B94-F30A-9AE9-4086-41062B0C35B8}</Project>
-      <Name>VuforiaScripts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

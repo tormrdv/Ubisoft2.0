@@ -48,7 +48,7 @@ public class CarContoller : MonoBehaviour
         {
             PlayerPrefs.SetString("VehicleColor", "FFFFFF");
         }
-
+        PlayerPrefCheck();
         //GYRO
         //rb = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
@@ -61,8 +61,7 @@ public class CarContoller : MonoBehaviour
         HandleSteering();
         UpdateWheels();
 
-        //Quaternion deviceRotation = DeviceRotation.Get();
-        //transform.rotation = deviceRotation;
+
         //rb.AddForce(transform.up * upSpeed, ForceMode.Acceleration);
         //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
@@ -71,24 +70,30 @@ public class CarContoller : MonoBehaviour
         ///???
     }
     public void PlayerPrefCheck()
-    {
+    {   
+        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         if (PlayerPrefs.HasKey("controls"))
         {
-            Debug.Log("Controls Found, Mode - " + PlayerPrefs.GetInt("controls"));
             controlType = PlayerPrefs.GetInt("controls");
         }
         else
         {
             PlayerPrefs.SetInt("controls", 0);
             controlType = 0;
+            turningButtons.SetActive(true);
         }
         if (PlayerPrefs.GetInt("controls") == 1)
         {
             turningButtons.SetActive(false);
         }
+        if (PlayerPrefs.GetInt("controls") == 0)
+        {
+            turningButtons.SetActive(true);
+        }
     }
 
-
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     private void GetInput()
     {
         verticalInput = 1;
@@ -106,6 +111,7 @@ public class CarContoller : MonoBehaviour
             case 1:
                 horizontalInput = Input.acceleration.x;
                 Debug.Log(horizontalInput);
+
 
                 if (horizontalInput < 0.19 && horizontalInput > -0.19)
                 {

@@ -53,13 +53,13 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\PackageImporter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetId.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetIdRemapBuilderEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetIdRemapBuilderTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetTreeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetIdRemapEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\PackageImporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\AssetId.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@4.5.2\AssetIdRemapUtility\Editor\Unity.ProBuilder.AssetIdRemapUtility.asmdef" />

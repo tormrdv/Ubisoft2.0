@@ -54,9 +54,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Code\pb_Stl.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Code\pb_Stl_Importer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Code\pb_Stl_Exporter.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Code\pb_Stl_Exporter.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Code\pb_Stl_Importer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\StlExporter\Unity.ProBuilder.Stl.asmdef" />
