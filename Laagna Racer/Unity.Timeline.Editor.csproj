@@ -95,8 +95,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Tooltip.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\inspectors\TimelineInspectorUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Manipulators\Sequence\SelectAndMoveItem.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Utilities\Scopes\LabelWidthScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Items\ItemsGroup.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Utilities\Scopes\LabelWidthScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\CurveEditUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\TimelineUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Actions\IMenuName.cs" />
@@ -162,8 +162,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Utilities\AnimatedPropertyUtility.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Animation\AnimationClipActions.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\TimelineEditor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\treeview\IRowGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\inspectors\BuiltInCurvePresets.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\treeview\IRowGUI.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Manipulators\AddDelete\AddDeleteItemModeReplace.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\Recording\AnimationTrackRecorder.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.4.8\Editor\inspectors\GroupTrackInspector.cs" />
@@ -565,6 +565,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.Unity.Editor">
+      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Editor\Vuforia.Unity.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.Unity.Wrapper">
+      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.Unity.Engine">
+      <HintPath>Library\PackageCache\com.ptc.vuforia.engine@92ee798c3b45-1644838625000\Vuforia\Plugins\Managed\Runtime\Vuforia.Unity.Engine.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
