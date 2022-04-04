@@ -12,16 +12,16 @@ public class ControlsSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (PlayerPrefs.HasKey("controls"))
+        if (PlayerPrefs.HasKey("controlType"))
         {
-            SetSliderValue(PlayerPrefs.GetInt("controls"));
-            Debug.Log("Controls Found, Mode - "+PlayerPrefs.GetInt("controls"));
+            SetSliderValue(PlayerPrefs.GetInt("controlType"));
+            Debug.Log("Controls Found, Mode - "+PlayerPrefs.GetInt("controlType"));
         }
         else
         {
-            PlayerPrefs.SetInt("controls", 0);
-            SetSliderValue(PlayerPrefs.GetInt("controls"));
-            Debug.Log("Controls NOT Found, Default - " + PlayerPrefs.GetInt("controls"));
+            PlayerPrefs.SetInt("controlType", 0);
+            SetSliderValue(PlayerPrefs.GetInt("controlType"));
+            Debug.Log("Controls NOT Found, Default - " + PlayerPrefs.GetInt("controlType"));
         }
     }
     public void SetSliderValue(int value)
@@ -30,7 +30,7 @@ public class ControlsSlider : MonoBehaviour
     }
     public void OnValueChanged()
     {
-        PlayerPrefs.SetInt("controls", (int)ControlSlider.value);
+        PlayerPrefs.SetInt("controlType", (int)ControlSlider.value);
         Debug.Log("Value Set to " + (int)ControlSlider.value);
     }
 }

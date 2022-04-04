@@ -53,18 +53,18 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\NearestNeighbourList.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\PriorityQueue.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\HyperRect.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\IKdTree.cs" />
+    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\Math\TypeMath.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\Math\FloatMath.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\IPriorityQueue.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\Math\ITypeMath.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\AssemblyInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\KdTree.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\PriorityQueue.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\HyperRect.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\KdTreeNode.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\IKdTree.cs" />
     <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\Math\DoubleMath.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\NearestNeighbourList.cs" />
-    <Compile Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\KdTreeLib\Math\TypeMath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.probuilder@4.5.2\External\KdTree\Unity.ProBuilder.KdTree.asmdef" />

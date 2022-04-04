@@ -15,13 +15,36 @@ public class GameManager: MonoBehaviour
     void Start()
     {
         ResetGame();
+        
+    }
+    private int ControlCheckup()
+    {
+        if (!PlayerPrefs.HasKey("controlType"))
+        {
+            PlayerPrefs.SetInt("controlType", 0);
+            Debug.Log("Controls missing, setting to default 0");
+        }
+        int controltype = PlayerPrefs.GetInt("controlType");
+        Debug.Log("ControlSet to " + controltype);
+        PlayerVehicle.GetComponent<CarContoller>().SetControlType(controltype);
+        return controltype;
+        
+
     }
     public void StartGame()
     {
         PlayerVehicle.SetActive(true);
-        VehicleControls.SetActive(true);
         ResetButton.SetActive(true);
         StartScreen.SetActive(false);
+        switch (ControlCheckup())
+        {
+            case 0:
+                VehicleControls.SetActive(true);
+                break;
+            case 1:
+                VehicleControls.SetActive(false);
+                break;
+        }
 
     }
     public void ResetGame()

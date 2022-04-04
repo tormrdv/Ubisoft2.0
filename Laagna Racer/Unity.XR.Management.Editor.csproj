@@ -69,6 +69,7 @@
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XRLoaderInfo.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\Metadata\XRPackage.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XRSettingsManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\Metadata\XRPackageMetadataStore.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\Metadata\XRPackageMetadata.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XRCustomLoaderUIManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\EditorUtilities.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XRConfigurationProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XRManagerEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\XREditorWorkQueue.cs" />
-    <Compile Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\Metadata\XRPackageMetadataStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.xr.management@4.2.1\Editor\Unity.XR.Management.Editor.asmdef" />

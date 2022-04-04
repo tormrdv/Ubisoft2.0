@@ -53,17 +53,17 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSettingsProvider.cs" />
-    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\PackageSettingsRepository.cs" />
-    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSettingsRepository.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\ISettingsRepository.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\Settings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSettingsProvider.cs" />
+    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\PackageSettingsRepository.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\Attributes.cs" />
+    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSettings.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\ValueWrapper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSetting.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\SettingsDictionary.cs" />
     <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\SettingsGUILayout.cs" />
-    <Compile Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\UserSetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.settings-manager@1.0.3\Editor\Unity.Settings.Editor.asmdef" />

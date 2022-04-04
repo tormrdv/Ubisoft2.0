@@ -24,7 +24,6 @@ public class CarContoller : MonoBehaviour
     // 1 - Keyboard + Screen
     // 2 - Tilt
 
-    [SerializeField] public GameObject turningButtons;
     [SerializeField] private float enginePower;
     [SerializeField] private float breakPower;
     [SerializeField] private float maxSteerAngle;
@@ -61,31 +60,13 @@ public class CarContoller : MonoBehaviour
         HandleSteering();
         UpdateWheels();
 
-        //Quaternion deviceRotation = DeviceRotation.Get();
-        //transform.rotation = deviceRotation;
+
         //rb.AddForce(transform.up * upSpeed, ForceMode.Acceleration);
         //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
     public void VehicleSetColor()
     {
         ///???
-    }
-    public void PlayerPrefCheck()
-    {
-        if (PlayerPrefs.HasKey("controls"))
-        {
-            Debug.Log("Controls Found, Mode - " + PlayerPrefs.GetInt("controls"));
-            controlType = PlayerPrefs.GetInt("controls");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("controls", 0);
-            controlType = 0;
-        }
-        if (PlayerPrefs.GetInt("controls") == 1)
-        {
-            turningButtons.SetActive(false);
-        }
     }
 
 
@@ -107,6 +88,7 @@ public class CarContoller : MonoBehaviour
                 horizontalInput = Input.acceleration.x;
                 Debug.Log(horizontalInput);
 
+
                 if (horizontalInput < 0.19 && horizontalInput > -0.19)
                 {
                     turningRight = false;
@@ -120,12 +102,16 @@ public class CarContoller : MonoBehaviour
                 {
                     turningLeft = true;
                 }
-                return;
-                
-
+                return;           
         }
 
-    }// Here starts the Android Turning System
+    }
+    public void SetControlType(int type)
+    {
+        controlType = type;
+        Debug.Log("Control mode set to "+type);
+    }
+    // Here starts the Android Turning System
     public void pressedRight()
     {
         turningRight = true;
