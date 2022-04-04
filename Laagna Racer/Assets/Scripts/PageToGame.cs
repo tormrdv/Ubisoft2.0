@@ -18,7 +18,7 @@ public class PageToGame : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData data)
     {
         float difference = (data.pressPosition.x - data.position.x);
-        Debug.Log(difference);
+        //Debug.Log(difference);
         transform.position = panelLocation - new Vector3(difference, 0, 0);
 
     }
@@ -34,9 +34,5 @@ public class PageToGame : MonoBehaviour, IDragHandler, IEndDragHandler
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 }

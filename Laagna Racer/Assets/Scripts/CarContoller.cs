@@ -24,7 +24,6 @@ public class CarContoller : MonoBehaviour
     // 1 - Keyboard + Screen
     // 2 - Tilt
 
-    [SerializeField] public GameObject turningButtons;
     [SerializeField] private float enginePower;
     [SerializeField] private float breakPower;
     [SerializeField] private float maxSteerAngle;
@@ -48,7 +47,7 @@ public class CarContoller : MonoBehaviour
         {
             PlayerPrefs.SetString("VehicleColor", "FFFFFF");
         }
-        PlayerPrefCheck();
+
         //GYRO
         //rb = GetComponent<Rigidbody>();
         Input.gyro.enabled = true;
@@ -69,31 +68,8 @@ public class CarContoller : MonoBehaviour
     {
         ///???
     }
-    public void PlayerPrefCheck()
-    {   
-        //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        if (PlayerPrefs.HasKey("controls"))
-        {
-            controlType = PlayerPrefs.GetInt("controls");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("controls", 0);
-            controlType = 0;
-            turningButtons.SetActive(true);
-        }
-        if (PlayerPrefs.GetInt("controls") == 1)
-        {
-            turningButtons.SetActive(false);
-        }
-        if (PlayerPrefs.GetInt("controls") == 0)
-        {
-            turningButtons.SetActive(true);
-        }
-    }
 
-    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
     private void GetInput()
     {
         verticalInput = 1;
@@ -126,12 +102,16 @@ public class CarContoller : MonoBehaviour
                 {
                     turningLeft = true;
                 }
-                return;
-                
-
+                return;           
         }
 
-    }// Here starts the Android Turning System
+    }
+    public void SetControlType(int type)
+    {
+        controlType = type;
+        Debug.Log("Control mode set to "+type);
+    }
+    // Here starts the Android Turning System
     public void pressedRight()
     {
         turningRight = true;
