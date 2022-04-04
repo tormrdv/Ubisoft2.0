@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 52073193}
   - component: {fileID: 52073192}
   m_Layer: 5
-  m_Name: ToSettingsPanel
+  m_Name: ToColor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1798,7 +1798,7 @@ GameObject:
   - component: {fileID: 706903118}
   - component: {fileID: 706903117}
   m_Layer: 5
-  m_Name: ToSettingsPanel (1)
+  m_Name: ToSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1987,7 +1987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionSmoothness: 0.05
-  rotationSmoothness: 0.005
+  rotationSmoothness: 0.015
   cameraRisingMulitplier: 0.5
   Following: {fileID: 681954532}
 --- !u!4 &769020737
@@ -2017,9 +2017,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777739053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78426198e6d8ae3448deb214442c5248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &777739056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777739053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee5e1f7d0fcad7458ccddbc6a42feae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &791111419
@@ -2226,8 +2238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -6.51709, y: 149.89343}
+  m_SizeDelta: {x: -13.0342, y: 299.7869}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858575146
 MonoBehaviour:
@@ -2255,7 +2267,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 55
-    m_MaxSize: 75
+    m_MaxSize: 95
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2285,7 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6daddf1e6eb772f44851e9f1da25d5a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeDelay: 3
+  fadeDelay: 2
 --- !u!43 &923392401
 Mesh:
   m_ObjectHideFlags: 0
@@ -3235,7 +3247,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446689351}
-  - component: {fileID: 1446689350}
   m_Layer: 0
   m_Name: TrackManager
   m_TagString: Untagged
@@ -3243,18 +3254,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1446689350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446689349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056507cdae6b31241ac3d5c90360b690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1446689351
 Transform:
   m_ObjectHideFlags: 0
@@ -3936,7 +3935,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03473bd5ccdd4a4da5ec2c5a74af1c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSmoothenss: 0
+  swipeDistance: 680
+  rightScene: ColorSettings
+  leftScene: GameSettings
 --- !u!850595691 &1710457983
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -4462,7 +4463,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-20076
+  m_Name: pb_Mesh-1218
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4764,14 +4765,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 35
+    m_MaxSize: 125
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RIGHT
+  m_Text: "\u25B6"
 --- !u!222 &2035306385
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5057,14 +5058,14 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 20
-    m_MaxSize: 35
+    m_MaxSize: 125
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEFT
+  m_Text: "\u25C0"
 --- !u!222 &2129481044
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5100,6 +5101,10 @@ PrefabInstance:
     - target: {fileID: 1778336588187872816, guid: 6bd7e1941921ce44c843829f6842d4e2, type: 3}
       propertyPath: m_Name
       value: S-W-turn_grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778336588187872816, guid: 6bd7e1941921ce44c843829f6842d4e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1778336588187872817, guid: 6bd7e1941921ce44c843829f6842d4e2, type: 3}
       propertyPath: m_RootOrder
@@ -5168,7 +5173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770130838391663222, guid: 9c40f90583f80d84fb309fec47b0f4c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.67
       objectReference: {fileID: 0}
     - target: {fileID: 3770130838391663222, guid: 9c40f90583f80d84fb309fec47b0f4c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5204,7 +5209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3770130838391663225, guid: 9c40f90583f80d84fb309fec47b0f4c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c40f90583f80d84fb309fec47b0f4c8, type: 3}
@@ -5460,7 +5465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7890373898863236283, guid: b8ae2683c1e470643980a3ec4c61995a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8ae2683c1e470643980a3ec4c61995a, type: 3}
