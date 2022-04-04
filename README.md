@@ -20,7 +20,7 @@ Kokkuvõttes pole funktsioonide ega süntaksi osas erinevusi. Unity C# on siiski
 
 
 
-Download: https://drive.google.com/file/d/1iDdwBm8GsTwmedYbNPhMkeKwt6umjk_a/view?usp=sharing
+Download: https://drive.google.com/file/d/1Soh9_75iyk1C2To40AwC1QvqxuC4josf/view?usp=sharing
 
 
 
