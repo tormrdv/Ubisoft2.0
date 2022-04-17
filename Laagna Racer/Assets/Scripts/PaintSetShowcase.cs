@@ -17,7 +17,7 @@ public class PaintSetShowcase : MonoBehaviour
         else
         {
             var cubeRenderer = gameObject.GetComponent<Renderer>();
-            Debug.Log(PlayerPrefs.GetString("VehicleColor"));
+            //Debug.Log(PlayerPrefs.GetString("VehicleColor"));
             string colorCode = ("#" + PlayerPrefs.GetString("VehicleColor"));
             if (ColorUtility.TryParseHtmlString(colorCode, out newCol))
             {
@@ -25,7 +25,7 @@ public class PaintSetShowcase : MonoBehaviour
             }
             else
             {
-                Debug.Log("Coloring Failed for sum reason idk");
+                //Debug.Log("Coloring Failed for sum reason idk");
             }
         }
     }

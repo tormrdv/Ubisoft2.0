@@ -115,12 +115,12 @@ public class CarContoller : MonoBehaviour
     public void pressedRight()
     {
         turningRight = true;
-        Debug.Log("right pressed");
+        //Debug.Log("right pressed");
     }
     public void pressedLeft()
     {
         turningLeft = true;
-        Debug.Log("left pressed");
+        //Debug.Log("left pressed");
     }
     public void releasedRight()
     {
@@ -168,8 +168,8 @@ public class CarContoller : MonoBehaviour
     private void HandleMotor()
     {
         float currentmodifier = AccelerationSpeed();
-        frontLeftWheelCollider.motorTorque = verticalInput * enginePower * currentmodifier;
-        frontRightWheelCollider.motorTorque = verticalInput * enginePower * currentmodifier;
+        backLeftWheelCollider.motorTorque = verticalInput * enginePower * currentmodifier;
+        backRightWheelCollider.motorTorque = verticalInput * enginePower * currentmodifier;
         currentbreakForce = isBreaking ? breakPower : 100f;
 
     }
@@ -209,7 +209,7 @@ public class CarContoller : MonoBehaviour
         Vector3 pos;
         Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot * Quaternion.Euler(0, 0, 90);
+        wheelTransform.rotation = rot * Quaternion.Euler(0, 0, 0);
         wheelTransform.position = pos;
     }
 }

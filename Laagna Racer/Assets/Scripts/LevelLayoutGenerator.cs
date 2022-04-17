@@ -13,19 +13,19 @@ public class LevelLayoutGenerator : MonoBehaviour
     public Vector3 spawnPosition;
     public int chunksToSpawn;
 
-    void onEnable()
+    void OnEnable()
     {
         TriggerExit.OnChunkExited += PickAndSpawnChunk;
     }
     private void OnDisable()
     {
-        TriggerExit.OnChunkExited -= PickAndSpawnCunk;
+        TriggerExit.OnChunkExited -= PickAndSpawnChunk;
     }
     void Update()
     {
         if (Input.GetKey(KeyCode.T))
         {
-            PickAndSpawnChunk;
+            PickAndSpawnChunk();
         }
     }
 
@@ -35,7 +35,7 @@ public class LevelLayoutGenerator : MonoBehaviour
 
         for(int i = 0; i < chunksToSpawn; i++)
         {
-            PickandSpawnChunk;
+            PickAndSpawnChunk();
         }
     }
     LevelChunkData PickNextChunk()
@@ -50,20 +50,20 @@ public class LevelLayoutGenerator : MonoBehaviour
         {
             case LevelChunkData.Direction.North:
                 nextRequiredDirection = LevelChunkData.Direction.South;
-                spawnPosition = spawnPosition + new Vector3(0f, 0, previousChunk.chunkSize.y);
+                spawnPosition =  spawnPosition + new Vector3(previousChunk.chunkSize.x, 0, 0);
                 break;
-            case LevelChunkData.Direction.east:
+            case LevelChunkData.Direction.East:
                 nextRequiredDirection = LevelChunkData.Direction.West;
-                spawnPosition = spawnPosition + new Vector3(previousChunk.chunkSize.x, 0, 0);
+                spawnPosition = spawnPosition + new Vector3(0, 0, -previousChunk.chunkSize.y);
                 break;
             // But why, if we aren't moving towards the South?
             case LevelChunkData.Direction.South:
                 nextRequiredDirection = LevelChunkData.Direction.North;
-                spawnPosition = spawnPostion + new Vector3(0, 0, -previousChunk.chunkSize.y);
+                spawnPosition = spawnPosition + new Vector3(-previousChunk.chunkSize.x, 0, 0);
                 break;
             case LevelChunkData.Direction.West:
                 nextRequiredDirection = LevelChunkData.Direction.East;
-                spawnPosition = spawnPosition + new Vector3(-previousChunk.chunkSize.x, 0, 0);
+                spawnPosition = spawnPosition + new Vector3(0f, 0, previousChunk.chunkSize.y);
                 break;
             default:
                 break;
@@ -86,9 +86,10 @@ public class LevelLayoutGenerator : MonoBehaviour
     {
         LevelChunkData chunkToSpawn = PickNextChunk();
 
-        GameObject objectFromChunk = chunksToSpawn.levelChunks[Random.Range(0, chunksToSpawn.levelChunks.Lenght)];
-        previousChunk = chunksToSpawn;
+        GameObject objectFromChunk = chunkToSpawn.levelChunks[Random.Range(0, chunkToSpawn.levelChunks.Length)];
+        previousChunk = chunkToSpawn;
         Instantiate(objectFromChunk, spawnPosition, Quaternion.identity);
+        Debug.Log("Chunk Spawned!");
     }
 
     public void UpdateSpawnOrigin(Vector3 originDelta)

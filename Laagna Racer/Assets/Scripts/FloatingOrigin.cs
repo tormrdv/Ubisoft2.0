@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 public class FloatingOrigin : MonoBehaviour
 {
     public float treshold;
-    public LevelLayoutGenerator levelLayoutGenerator;
+    public LevelLayoutGenerator layOutGenerator;
 
     private void LateUpdate()
     {
-        Vector3 cameraPosition = GameObject.transform.position;
+        Vector3 cameraPosition = gameObject.transform.position;
 
         //Do I need this?
         cameraPosition.y = 0f;
@@ -25,6 +25,10 @@ public class FloatingOrigin : MonoBehaviour
                     g.transform.position -= cameraPosition;
                 }
             }
+
+            Vector3 originDelta = Vector3.zero - cameraPosition;
+            layOutGenerator.UpdateSpawnOrigin(originDelta);
+            Debug.Log("Reseting position, origin delta = " + originDelta);
         }
     }
 }

@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {   
         //Maybe try LateUpdate later?
         Vector3 CarPosition = Following.transform.position;
