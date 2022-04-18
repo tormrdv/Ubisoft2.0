@@ -7,7 +7,10 @@ using UnityEngine.SceneManagement;
 public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
 {
     private Vector3 panelLocation;
-    [SerializeField] public float changeSmoothenss;
+    public float swipeDistance;
+    //
+    public string rightScene;
+    public string leftScene;
 
 
     // Start is called before the first frame update
@@ -18,8 +21,8 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     public void OnDrag(PointerEventData data)
     {
         float difference = (data.pressPosition.x - data.position.x);
-        //Debug.Log(difference);
         transform.position = panelLocation - new Vector3(difference, 0, 0);
+        Debug.Log(difference);
        
     }
     public void OnEndDrag(PointerEventData data)
@@ -27,14 +30,17 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
         float difference = (data.pressPosition.x - data.position.x);
         switch (difference)
         {
-            case var expression when difference > 550f:
-                SceneManager.LoadScene("UserSettings");
+            case var expression when (difference > swipeDistance) && !string.IsNullOrEmpty(rightScene):
+                SceneManager.LoadScene(rightScene);
+                Debug.Log("loaded Right");
                 break;
-            case var expression when difference < -550f:
-                SceneManager.LoadScene("GameSettings");
+            //Checks for difference, AND whether scene name string is defined
+            case var expression when (difference < (-1*swipeDistance)) && !string.IsNullOrEmpty(leftScene):
+                SceneManager.LoadScene(leftScene);
+                Debug.Log("loaded Left");
                 break;
             default:
-                transform.position = Vector3.Lerp(data.pressPosition, panelLocation, 1);
+                transform.position = panelLocation;
                 break;
         }
 

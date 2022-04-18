@@ -6,6 +6,8 @@ TagManager:
   tags:
   - UI Element
   - PlayerVehicle
+  - CarTag
+  - TrackPiece
   layers:
   - Default
   - TransparentFX
