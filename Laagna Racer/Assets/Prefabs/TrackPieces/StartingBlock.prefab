@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 402500753695410220}
   m_Layer: 0
   m_Name: StartingBlock
-  m_TagString: Untagged
+  m_TagString: TrackPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4553438974544313458}
   - component: {fileID: 6083407562355000863}
-  - component: {fileID: 7897642674123944838}
+  - component: {fileID: 1242619489064112582}
   m_Layer: 0
   m_Name: ExitNodeN
   m_TagString: Untagged
@@ -136,7 +136,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.7, z: 2.79}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7897642674123944838
+--- !u!114 &1242619489064112582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,9 +145,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2278942608046218332}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea886ddd9fb356e4d949929b1458a2fd, type: 3}
+  m_Script: {fileID: 11500000, guid: 9febf06bda5b8e948ab7253c2ead088a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyDelay: 0
 --- !u!1 &7544946901666384566
 GameObject:
   m_ObjectHideFlags: 0

@@ -6262,7 +6262,7 @@ GameObject:
   - component: {fileID: 1628355858676482173}
   m_Layer: 0
   m_Name: E-N
-  m_TagString: Untagged
+  m_TagString: TrackPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

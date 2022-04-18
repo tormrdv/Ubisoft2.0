@@ -28,8 +28,13 @@ public class LevelLayoutGenerator : MonoBehaviour
             PickAndSpawnChunk();
         }
     }
+    public void ResetOrigin()
+    {
+        spawnOrigin = Vector3.zero;
+        spawnPosition = Vector3.zero;
+    }
 
-    void Start()
+    public void Setup()
     {
         previousChunk = firstChunk;
 
