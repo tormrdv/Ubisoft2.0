@@ -11,7 +11,7 @@ public class GameManager: MonoBehaviour
     public GameObject ResetButton;
     public GameObject StartScreen;
     public GameObject SpawnBlock;
-    public GameObject ScoreField;
+
 
     private int highScore;
     private int currentScore = 0;
@@ -47,7 +47,7 @@ public class GameManager: MonoBehaviour
         StartScreen.SetActive(false);
         levelGen.GetComponent<LevelLayoutGenerator>().ResetOrigin();
         levelGen.GetComponent<LevelLayoutGenerator>().Setup();
-        ResetScore();
+        //ResetScore();
         
         
 
@@ -70,10 +70,10 @@ public class GameManager: MonoBehaviour
         StartScreen.SetActive(true);
         
         RemoveLevel();
-        Vector3 position = new Vector3(5.02502441f, 19.0245361f, 3.90490723f);
+        Vector3 position = new Vector3(0f, 0f, 0f);
         Instantiate(SpawnBlock, position, Quaternion.identity);
 
-        EndScore();
+        //EndScore();
         
     }
     public void PlayerPrefCheck()
@@ -107,11 +107,11 @@ public class GameManager: MonoBehaviour
             PlayerPrefs.SetInt("HighScore", 0);
         }
         highScore = PlayerPrefs.GetInt("HighScore");
-        ScoreField.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + hideFlags.ToString();
+        //ScoreField.GetComponent<UnityEngine.UI.Text>().text = "High Score: " + hideFlags.ToString();
 
 
     }
-    private void ResetScore()
+    /* private void ResetScore()
     {
         currentScore = 0;
         ScoreField.GetComponent<UnityEngine.UI.Text>().text = currentScore.ToString();
@@ -119,7 +119,8 @@ public class GameManager: MonoBehaviour
     private void UpdateScore()
     {
         currentScore += 1;
-        ScoreField.GetComponent<UnityEngine.UI.Text>().text = currentScore.ToString();
+
+        //ScoreField.GetComponent<UnityEngine.UI.Text>().text = currentScore.ToString();
 
 
     }
@@ -137,5 +138,5 @@ public class GameManager: MonoBehaviour
     private void OnEnable()
     {
         TriggerExit.OnChunkExited += UpdateScore;
-    }
+    }*/
 }

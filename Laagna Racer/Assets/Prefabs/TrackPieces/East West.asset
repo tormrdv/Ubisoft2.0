@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chunkSize: {x: 30, y: 30}
   levelChunks:
-  - {fileID: 6019563737742608096, guid: e46f5ca3808065e4485906af24f10de8, type: 3}
+  - {fileID: 509393204579366732, guid: d73314885a348574596e1af181be8e6e, type: 3}
+  - {fileID: 8908331929887157210, guid: 36a6652d76163f646902193266cc6070, type: 3}
+  - {fileID: 3598156279844057215, guid: 8bd30687420ed034da0bf850b1d69ce3, type: 3}
+  - {fileID: 5957472030582610915, guid: 06dbfe9b268aed147b5cd8ab2b2a351f, type: 3}
+  - {fileID: 517661562411850037, guid: 9363a40e89d224941b298ec81da967c9, type: 3}
+  - {fileID: 6107335826555503603, guid: 863cf4b0130b01440a74efb6ea42a919, type: 3}
+  - {fileID: 354474240184340510, guid: 9374ea27ef94719448c700a72bd2f0df, type: 3}
+  - {fileID: 7416895325989291572, guid: 118098975da08984ab26c012abc6b5ba, type: 3}
   entryDirection: 1
   exitDirection: 3

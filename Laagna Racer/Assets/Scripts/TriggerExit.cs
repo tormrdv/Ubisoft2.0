@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerExit : MonoBehaviour
 {
-    public float destroyDelay;
+    public float destroyDelay = 20;
 
     public delegate void ExitAction();
     public static event ExitAction OnChunkExited;
@@ -19,6 +19,7 @@ public class TriggerExit : MonoBehaviour
             {
                 exited = true;
                 OnChunkExited();
+                Debug.Log("Chunk Exited");
                 StartCoroutine(WaitAndDeactivate());
             }
         }

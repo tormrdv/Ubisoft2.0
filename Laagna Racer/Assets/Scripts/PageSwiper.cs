@@ -22,7 +22,7 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         float difference = (data.pressPosition.x - data.position.x);
         transform.position = panelLocation - new Vector3(difference, 0, 0);
-        Debug.Log(difference);
+        //Debug.Log(difference);
        
     }
     public void OnEndDrag(PointerEventData data)
@@ -32,12 +32,12 @@ public class PageSwiper : MonoBehaviour, IDragHandler, IEndDragHandler
         {
             case var expression when (difference > swipeDistance) && !string.IsNullOrEmpty(rightScene):
                 SceneManager.LoadScene(rightScene);
-                Debug.Log("loaded Right");
+                //Debug.Log("loaded Right");
                 break;
             //Checks for difference, AND whether scene name string is defined
             case var expression when (difference < (-1*swipeDistance)) && !string.IsNullOrEmpty(leftScene):
                 SceneManager.LoadScene(leftScene);
-                Debug.Log("loaded Left");
+                //Debug.Log("loaded Left");
                 break;
             default:
                 transform.position = panelLocation;
