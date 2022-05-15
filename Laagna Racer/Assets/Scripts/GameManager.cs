@@ -27,12 +27,8 @@ public class GameManager: MonoBehaviour
     }
     private int ControlCheckup()
     {
-        if (!PlayerPrefs.HasKey("controlType"))
-        {
-            PlayerPrefs.SetInt("controlType", 0);
-            Debug.Log("Controls missing, setting to default 0");
-        }
-        int controltype = PlayerPrefs.GetInt("controlType");
+
+        int controltype = PlayerPrefs.GetInt("ControlType");
         Debug.Log("ControlSet to " + controltype);
         PlayerVehicle.GetComponent<CarContoller>().SetControlType(controltype);
         return controltype;
@@ -75,17 +71,6 @@ public class GameManager: MonoBehaviour
 
         //EndScore();
         
-    }
-    public void PlayerPrefCheck()
-    {
-        if (PlayerPrefs.HasKey("controls"))
-        {
-            Debug.Log("Controls Found, Mode - " + PlayerPrefs.GetInt("controls"));
-        }
-        else
-        {
-            PlayerPrefs.SetInt("controls", 0);
-        }
     }
     private void RemoveLevel()
     {

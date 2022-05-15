@@ -57,19 +57,22 @@
     <Compile Include="Assets\Scripts\LevelLayoutGenerator.cs" />
     <Compile Include="Assets\Scripts\PageSwiper.cs" />
     <Compile Include="Assets\Scripts\TextBlink.cs" />
+    <Compile Include="Assets\Scripts\CarControlImproved.cs" />
     <Compile Include="Assets\Scripts\DestroyOnPassing.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />
     <Compile Include="Assets\Scripts\PaintSetShowcase.cs" />
+    <Compile Include="Assets\Scripts\CarTag.cs" />
     <Compile Include="Assets\Scripts\LevelChunkData.cs" />
     <Compile Include="Assets\Scripts\DummyRotation.cs" />
     <Compile Include="Assets\Scripts\CarContoller.cs" />
+    <Compile Include="Assets\Scripts\TriggerExit.cs" />
     <Compile Include="Assets\Scripts\FloatingOrigin.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\ColorPicker.cs" />
     <Compile Include="Assets\DeviceRoation.cs" />
-    <Compile Include="Assets\Scripts\TriggerExit.cs" />
-    <Compile Include="Assets\Scripts\CarTag.cs" />
+    <Compile Include="Assets\Scripts\ButtonSteeringHandler.cs" />
+    <Compile Include="Assets\Scripts\FirstLoading.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
