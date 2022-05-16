@@ -66,8 +66,12 @@ public class CarControlImproved : MonoBehaviour
                 return;
             case 1:
                 //Takes the X axis input of the phone. Mathf.Clamp limits the values between allowed steering angles
+
+                Debug.Log("Using Tilting for Turnign");
                 float horizontalInput = Input.acceleration.x;
-                horizontalInput = Mathf.Clamp(horizontalInput, -maxSteerAngle, maxSteerAngle);
+
+                horizontalInput = Mathf.Clamp(horizontalInput, -maxSteerAngle, maxSteerAngle)*25;
+                Debug.Log(horizontalInput);
                 frontLeftWheelCollider.steerAngle = horizontalInput;
                 frontRightWheelCollider.steerAngle = horizontalInput;
                 return;

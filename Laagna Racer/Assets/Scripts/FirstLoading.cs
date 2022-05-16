@@ -7,6 +7,7 @@ public class FirstLoading : MonoBehaviour
 {
     public GameObject Title;
     [SerializeField] private string sceneName;
+    float counter = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,18 @@ public class FirstLoading : MonoBehaviour
     }
     private void Update()
     {
-        SceneManager.LoadScene(sceneName);
+
+        if (counter < 3)
+        {
+            counter += counter*Time.deltaTime;  
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+
+        }
+       
+        
     }
 }
    

@@ -1,53 +1,101 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimeCycle : MonoBehaviour
 {
-    [SerializeField] private float min_time;
-    [SerializeField] private float max_time;
+    [SerializeField] private int min_time;
+    [SerializeField] private int max_time;
+    private int counterToChange;
+    private int counter;
     [SerializeField] private Color colorDay;
     [SerializeField] private Color colorNight;
     [SerializeField] private float colorDelay;
     Light light;
     private bool IsDay;
     private bool inProgress;
-    
-    
+
+
 
     // Start is called before the first frame update
     void Start()
     {
+        newRandomValue();
+        //Debug.Log(counter);
+        //Debug.Log(counterToChange);
         inProgress = false;
-        
+        IsDay = true;
         light = GetComponent<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (!inProgress)
+        if (counter >= counterToChange && !inProgress)
         {
-            inProgress = true;
+            
+            //When Counter is fufilled, new value is chosen.
+            newRandomValue();
+
+
             if (IsDay)
             {
-                light.color = Color.Lerp(colorDay, colorNight, colorDelay);
-                StartCoroutine(WaitBeforeChanging(Random.Range(min_time, max_time)));
-                IsDay = false;
+                StartCoroutine(DaytoNight(colorDelay));
+                return;
             }
             else
-            {    
-                light.color = Color.Lerp(colorNight, colorDay, colorDelay);
-                StartCoroutine(WaitBeforeChanging(Random.Range(min_time, max_time)));
-                IsDay = true;
+            {
+                StartCoroutine(NightToDay(colorDelay));
+                return;
             }
-            inProgress=false;
         }
+
     }
 
-    IEnumerator WaitBeforeChanging(float delay)
+
+    IEnumerator DaytoNight(float delay)
     {
-        yield return new WaitForSeconds(delay);
+        inProgress = true;
+        while (light.color != colorNight)
+        {
+            float t = Mathf.PingPong(Time.time, delay) / delay;
+            light.color = Color.Lerp(light.color, colorNight, t);   
+        }
+        
+        IsDay = false;
+        yield return null;
     }
-   
+    IEnumerator NightToDay(float delay)
+    {
+        inProgress = true;
+        while (light.color != colorDay)
+        {
+            float t = Mathf.PingPong(Time.time, delay) / delay;
+            light.color = Color.Lerp(light.color, colorDay, t);
+            
+        }
+        IsDay = true;
+        yield return null;
+    }
+    private void newRandomValue()
+    {
+        counterToChange = Random.Range(min_time, max_time);
+        counter = 0;
+
+    }
+    private void CountValueUp()
+    {
+        counter++;
+        Debug.Log(counter);
+    }
+    private void OnEnable()
+    {
+        TriggerExit.OnChunkExited += CountValueUp;
+    }
+    private void OnDisable()
+    {
+        TriggerExit.OnChunkExited -= CountValueUp;
+    }
+
+
+
 }

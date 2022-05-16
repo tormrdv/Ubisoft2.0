@@ -18,7 +18,7 @@ public class IsOnRoad : MonoBehaviour
         if (other.gameObject.tag == "Road" && velocity > 0.3f)
         {
             timer = 0f;
-            Debug.Log("Everythign is good");
+            //Debug.Log("Everythign is good");
         }
         else
         {
