@@ -7,7 +7,7 @@ public class CarControlImproved : MonoBehaviour
     [SerializeField] private float enginePower;
     [SerializeField] private float maxSteerAngle;
     private int turnDirection = 0;
-    private float turnSpeed = 1f;
+    [SerializeField] private float turnSpeed = 1f;
     [SerializeField] private float startMaxVelocity = 3f;
     [SerializeField] private float velocityMultiplier = 0.003f;
 
@@ -34,7 +34,7 @@ public class CarControlImproved : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         HandleMotor();
         HandleSteering();
@@ -47,8 +47,8 @@ public class CarControlImproved : MonoBehaviour
         float velocity = startMaxVelocity - GetComponent<Rigidbody>().velocity.magnitude;
         Mathf.Clamp(velocity, 0.0f, 1000f);
 
-        backLeftWheelCollider.motorTorque = enginePower * 1;
-        backRightWheelCollider.motorTorque = enginePower * 1;
+        frontLeftWheelCollider.motorTorque = enginePower * velocity;
+        frontRightWheelCollider.motorTorque = enginePower * velocity;
     }
     public void SetCarToStart()
     {
@@ -62,7 +62,7 @@ public class CarControlImproved : MonoBehaviour
         {
             case 0:
                 frontLeftWheelCollider.steerAngle = Mathf.Lerp(frontLeftWheelCollider.steerAngle, turnDirection * maxSteerAngle, Time.deltaTime * turnSpeed);
-                frontRightWheelCollider.steerAngle = Mathf.Lerp(-frontRightWheelCollider.steerAngle, turnDirection * maxSteerAngle, Time.deltaTime * turnSpeed);
+                frontRightWheelCollider.steerAngle = Mathf.Lerp(frontRightWheelCollider.steerAngle, turnDirection * maxSteerAngle, Time.deltaTime * turnSpeed);
                 return;
             case 1:
                 //Takes the X axis input of the phone. Mathf.Clamp limits the values between allowed steering angles
@@ -100,6 +100,10 @@ public class CarControlImproved : MonoBehaviour
     {
         //Increases max velocity over the game time
         startMaxVelocity = startMaxVelocity + ( Time.deltaTime * velocityMultiplier);
+    }
+    public void SetControlType(int control)
+    {
+        controlType = control;
     }
 
 }

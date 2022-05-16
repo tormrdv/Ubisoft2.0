@@ -8,19 +8,8 @@ public class ButtonSteeringHandler : MonoBehaviour, IPointerDownHandler, IPointe
 {   
     //Sets the steering direction that the Script would be using
     public int steeringDirection;
-    private GameObject PlayerCar;
-    void Start()
-    {
-        PlayerCar = GameObject.FindGameObjectWithTag("CarTag");
-    }
-    void Update()
-    {
-        if (!ispressed)
-            return;
-        // DO SOMETHING HERE
-        Debug.Log("Pressed");
-    }
-    bool ispressed = false;
+    public GameObject PlayerCar;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         PlayerCar.GetComponent<CarControlImproved>().SetTurningDirection(steeringDirection);

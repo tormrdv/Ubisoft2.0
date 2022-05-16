@@ -7,9 +7,6 @@ public class FirstLoading : MonoBehaviour
 {
     public GameObject Title;
     [SerializeField] private string sceneName;
-    private bool faded = true;
-    private bool inProgress = false;
-    [SerializeField] private float fadeDelay;
     // Start is called before the first frame update
     void Start()
     {

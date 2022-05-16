@@ -15,7 +15,12 @@
       "ProjectGuid": "5d639175-fbd4-f0e1-0c1c-ad4c54bc6543",
       "DisplayName": "Assembly-CSharp-Editor",
       "ColorIndex": 1
+    },
+    "a9b26fd0-8936-1f4c-4cb4-07c7186aca5c": {
+      "ProjectGuid": "a9b26fd0-8936-1f4c-4cb4-07c7186aca5c",
+      "DisplayName": "Assembly-CSharp.Player",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }

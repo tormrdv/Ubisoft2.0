@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class CarTag : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Collision");
-    }
+
 }

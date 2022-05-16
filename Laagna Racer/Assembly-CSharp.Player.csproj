@@ -53,8 +53,9 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\ControlsSlider.cs" />
+    <Compile Include="Assets\Scripts\ControlsSlider.cs" />
     <Compile Include="Assets\Scripts\LevelLayoutGenerator.cs" />
+    <Compile Include="Assets\Scripts\TimeCycle.cs" />
     <Compile Include="Assets\Scripts\PageSwiper.cs" />
     <Compile Include="Assets\Scripts\TextBlink.cs" />
     <Compile Include="Assets\Scripts\CarControlImproved.cs" />
@@ -69,10 +70,13 @@
     <Compile Include="Assets\Scripts\FloatingOrigin.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\ColorPicker.cs" />
-    <Compile Include="Assets\DeviceRoation.cs" />
-    <Compile Include="Assets\Scripts\ButtonSteeringHandler.cs" />
+    <Compile Include="Assets\Scripts\IsOnRoad.cs" />
     <Compile Include="Assets\Scripts\FirstLoading.cs" />
+    <Compile Include="Assets\Scripts\ColorPicker.cs" />
+    <Compile Include="Assets\Scripts\DeviceRoation.cs" />
+    <Compile Include="Assets\Scripts\ButtonSteeringHandler.cs" />
+    <Compile Include="Assets\Scripts\ScoreBoard.cs" />
+    <Compile Include="Assets\Scripts\RestartGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
