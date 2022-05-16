@@ -1,25 +1,28 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonSteeringHandler
     - CameraFollow
-    - CarContoller
+    - CarControlImproved
     - CarTag
     - ColorPicker
     - ControlsSlider
-    - DestroyOnPassing
     - DummyRotation
+    - FirstLoading
     - GameManager
+    - IsOnRoad
     - LevelChunkData
     - LevelLayoutGenerator
     - PageSwiper
     - PaintSetShowcase
+    - RestartGame
+    - ScoreBoard
     - TextBlink
+    - TimeCycle
     - TriggerExit
     Unity.ProBuilder.Editor.dll:
     - UnityEditor.ProBuilder.EditorToolbar
     - UnityEditor.ProBuilder.ProBuilderEditor
-    Unity.ProBuilder.dll:
-    - UnityEngine.ProBuilder.ProBuilderMesh
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -74,8 +77,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -87,25 +88,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2792}
     - Class: 114
-      Script: {instanceID: 2900}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3044}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 4906}
+      Script: {instanceID: 4918}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -141,8 +142,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
     - Class: 64
@@ -160,53 +159,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1884}
-    - Class: 114
       Script: {instanceID: 2166}
-    - Class: 114
-      Script: {instanceID: 2242}
     - Class: 114
       Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2352}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2900}
+      Script: {instanceID: 2730}
     - Class: 114
-      Script: {instanceID: 2918}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2906}
     - Class: 114
-      Script: {instanceID: 2978}
+      Script: {instanceID: 2924}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3194}
     - Class: 114
-      Script: {instanceID: 3324}
+      Script: {instanceID: 3312}
     - Class: 114
-      Script: {instanceID: 3660}
+      Script: {instanceID: 3330}
     - Class: 114
-      Script: {instanceID: 3756}
+      Script: {instanceID: 3666}
     - Class: 114
-      Script: {instanceID: 3984}
+      Script: {instanceID: 3762}
     - Class: 114
-      Script: {instanceID: 4538}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 4866}
+      Script: {instanceID: 4586}
     - Class: 114
-      Script: {instanceID: 5278}
+      Script: {instanceID: 4878}
     - Class: 114
-      Script: {instanceID: 19360}
+      Script: {instanceID: 5264}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -253,17 +248,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2488}
+      Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2580}
+      Script: {instanceID: 2584}
     - Class: 114
-      Script: {instanceID: 2604}
+      Script: {instanceID: 2608}
     - Class: 114
-      Script: {instanceID: 2744}
+      Script: {instanceID: 2750}
     - Class: 114
-      Script: {instanceID: 2956}
+      Script: {instanceID: 2962}
     - Class: 114
-      Script: {instanceID: 3188}
+      Script: {instanceID: 3194}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -273,6 +268,61 @@ ScriptsOnlyBuild:
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Loading.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1884}
+    - Class: 114
+      Script: {instanceID: 2242}
+    - Class: 114
+      Script: {instanceID: 2252}
+    - Class: 114
+      Script: {instanceID: 2608}
+    - Class: 114
+      Script: {instanceID: 2750}
+    - Class: 114
+      Script: {instanceID: 2962}
+    - Class: 114
+      Script: {instanceID: 3194}
+    - Class: 114
+      Script: {instanceID: 4544}
+    - Class: 114
+      Script: {instanceID: 4874}
+    - Class: 114
+      Script: {instanceID: 4892}
+    - Class: 114
+      Script: {instanceID: 31160}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -415,10 +465,22 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RestartGame
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 579e9784026f5ebdbba2e5ea5b092ebe
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeCycle
   - hash:
       serializedVersion: 2
       Hash: 49bc7b826eacb82b18aa1492ae0d72f9
@@ -443,6 +505,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 7fa6b6f2aee6c8798a80942745c64ec2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CarControlImproved
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -655,7 +723,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 3ef8452a14e4688eb0344357cd77d245
+      Hash: b84f97663660b7c23a17cc066ef01fb2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -829,6 +897,12 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
+      Hash: ebd43d9ee0e6025336f61de3b650efca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IsOnRoad
+  - hash:
+      serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
     assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
     namespaceName: UnityEngine.XR.LegacyInputHelpers
@@ -845,6 +919,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreBoard
+  - hash:
+      serializedVersion: 2
+      Hash: badc8da2fdba138379e04a97b21f4e31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FirstLoading
   - hash:
       serializedVersion: 2
       Hash: 77a0ebbfb05c7561244ca8a63640cfc4
@@ -871,6 +957,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 08e5ec302b306f1784b607f16083fe38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonSteeringHandler
+  - hash:
+      serializedVersion: 2
       Hash: 05655f7deb066a961c41619ac9e98263
     assemblyName: Unity.ProBuilder.dll
     namespaceName: UnityEngine.ProBuilder
@@ -889,7 +981,8 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Loading.unity
   - Assets/Scenes/GameScene.unity
   - Assets/Scenes/ColorSettings.unity
   - Assets/Scenes/GameSettings.unity
-  playerPath: Q:/Unity/LaagnaRacerUpdated.apk
+  playerPath: Q:/Unity/TheLaagnaRacer.apk

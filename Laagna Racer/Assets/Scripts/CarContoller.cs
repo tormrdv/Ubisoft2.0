@@ -64,10 +64,6 @@ public class CarContoller : MonoBehaviour
         //rb.AddForce(transform.up * upSpeed, ForceMode.Acceleration);
         //rb.velocity = Vector3.ClampMagnitude(rb.velocity, maxSpeed);
     }
-    public void VehicleSetColor()
-    {
-        ///???
-    }
 
 
     private void GetInput()
@@ -109,7 +105,7 @@ public class CarContoller : MonoBehaviour
     public void SetControlType(int type)
     {
         controlType = type;
-        Debug.Log("Control mode set to "+type);
+        //Debug.Log("Control mode set to "+type);
     }
     // Here starts the Android Turning System
     public void pressedRight()

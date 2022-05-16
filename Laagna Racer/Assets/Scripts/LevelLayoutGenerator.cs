@@ -94,7 +94,7 @@ public class LevelLayoutGenerator : MonoBehaviour
         GameObject objectFromChunk = chunkToSpawn.levelChunks[Random.Range(0, chunkToSpawn.levelChunks.Length)];
         previousChunk = chunkToSpawn;
         Instantiate(objectFromChunk, spawnPosition, Quaternion.identity);
-        Debug.Log("Chunk Spawned!");
+        //Debug.Log("Chunk Spawned!");
     }
 
     public void UpdateSpawnOrigin(Vector3 originDelta)

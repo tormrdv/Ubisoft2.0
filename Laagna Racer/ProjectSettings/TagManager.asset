@@ -8,6 +8,9 @@ TagManager:
   - PlayerVehicle
   - CarTag
   - TrackPiece
+  - Road
+  - Roudnt
+  - Haus
   layers:
   - Default
   - TransparentFX
