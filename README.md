@@ -6,6 +6,12 @@
 ### *Currently in deeper alpha than DayZ Standalone in 2013.*
 
 
+![Screenshot_2022-05-16-15-38-06-712_com Ubisoft2 LaagnaRacer](https://user-images.githubusercontent.com/70939410/168594500-d2ee44e3-b95b-447b-82d8-76f15e3c0add.jpg)
+![Screenshot_2022-05-16-15-38-57-490_com Ubisoft2 LaagnaRacer](https://user-images.githubusercontent.com/70939410/168594512-395cc2e0-34f3-4bf0-a929-4d772a82cda0.jpg)
+
+
+
+
 #### Download The Newest Bugridden version here:> https://drive.google.com/file/d/1pJ2r2Rbt6CTNUDLgyr2k0XfXO1eRLeeq/view?usp=sharing
 
 
